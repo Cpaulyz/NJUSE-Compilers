@@ -1,0 +1,29 @@
+int main(char **agrv[]) 
+{
+    _as_a = .5e03
+    // line comment
+     /* /* /*
+     block comment
+    */get
+     int i = 1;
+     !
+     09
+     0xG
+     9.e+
+     5>4
+     0<2
+     a >= b
+     c!=3
+     d == hahah
+     dasd/5
+     a||b&&
+     Father.haha();
+     float hah;
+     if(a){
+         do
+     }else{
+         while(1);
+     }
+
+
+ }
