@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.14)  30 NOV 2020 21:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.14)  3 DEC 2020 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1423,7 +1423,7 @@ Package bibentry Warning: You have used \nobibliography*
 
 ]
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 139; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 141; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1432,21 +1432,21 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 139; it cannot be
 
 
 LaTeX Font Warning: Font shape `TU/FandolSong-Regular.otf(0)/m/sc' undefined
-(Font)              using `TU/FandolSong-Regular.otf(0)/m/n' instead on input line 139.
+(Font)              using `TU/FandolSong-Regular.otf(0)/m/n' instead on input line 141.
 
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (./hw3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 139.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `hw3.out' has not changed.
 (rerunfilecheck)             Checksum: B3FC8A766F321D2F4D5A8CA21D05BB39;115.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
  29691 strings out of 481358
@@ -1455,6 +1455,6 @@ Here is how much of TeX's memory you used:
  46529 multiletter control sequences out of 15000+600000
  539550 words of font info for 76 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 71i,11n,85p,537b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,85p,537b,599s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on hw3.pdf (2 pages).

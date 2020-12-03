@@ -55,11 +55,11 @@
 \begin{enumerate}[(1)]
     
   \item 
-    $FISTR(A) = \{c,\epsilon\}$\\
-    $FISTR(S) = \{a,b\}$
+  $FISTR(S) = \{a,b\}$\\
+    $FISTR(A) = \{c,\epsilon\}$
   \item 
-    $FOLLOW(A) = \{a,b,\$\}$\\
-    $FOLLOW(S) = \{a,b,\}$
+    $FOLLOW(S) = \{a,b,\$\}$\\
+    $FOLLOW(A) = \{a,b\}$
   \item 
     \begin{tabular}{|c|c|c|c|c|}% 通过添加 | 来表示是否需要绘制竖线
     \hline  % 在表格最上方绘制横线
@@ -70,6 +70,8 @@
     A&4&4&3&\ \\
     \hline % 在表格最下方绘制横线
     \end{tabular}
+  \item 
+    是，因为预测分析表无冲突
   \item 
   \begin{algorithm}
     \begin{algorithmic}[1]
