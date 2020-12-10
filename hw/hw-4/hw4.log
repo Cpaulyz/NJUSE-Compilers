@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.14)  4 DEC 2020 15:23
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.14)  10 DEC 2020 23:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1420,15 +1420,20 @@ Package xeCJK Warning: Unknown CJK family `kai' is being ignored.
 (xeCJK)                it.
 
 Package hyperref Info: bookmark level for unknown solution defaults to 0 on input line 60.
-File: LR0.png Graphic file (type bmp)
-<LR0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--143
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
 
  []
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 143; it cannot be
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
+
+ []
+
+File: LR0.png Graphic file (type bmp)
+<LR0.png>
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 102; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1437,9 +1442,13 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 143; it cannot be
 
 
 LaTeX Font Warning: Font shape `TU/FandolSong-Regular.otf(0)/m/sc' undefined
-(Font)              using `TU/FandolSong-Regular.otf(0)/m/n' instead on input line 143.
+(Font)              using `TU/FandolSong-Regular.otf(0)/m/n' instead on input line 102.
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 136--149
+
+ []
+
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
@@ -1449,7 +1458,7 @@ Package bibentry Warning: You have used \nobibliography*
 \openout6 = `hw4.thm'.
 
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 166; it cannot be
+Package fontspec Warning: \addfontfeature(s) ignored on line 172; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -1457,26 +1466,26 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 166; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
  (./hw4.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 172.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `hw4.out' has not changed.
 (rerunfilecheck)             Checksum: B3FC8A766F321D2F4D5A8CA21D05BB39;115.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
  ) 
 Here is how much of TeX's memory you used:
  29764 strings out of 481358
  591344 string characters out of 5927880
- 922433 words of memory out of 5000000
+ 917433 words of memory out of 5000000
  46593 multiletter control sequences out of 15000+600000
  539550 words of font info for 76 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 71i,13n,85p,537b,654s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,13n,85p,537b,671s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on hw4.pdf (3 pages).

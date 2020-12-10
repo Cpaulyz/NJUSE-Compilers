@@ -61,6 +61,12 @@
     \item 
       一组或多组成对括号，一组成对括号的形式为(),(()),(((...)))，但不包括一对括号内包含多个成对括号的情况，如(()())
     \item 
+      $I_0$ = \textsc{closure}$(\{L’→·L\})$ \\
+      = \textsc{closure}$(\{L’→·L,L→·LP,L→·P\})$\\
+           = $\{L’→·L,L→·LP,L→·P,P→·(P),P→·()\}$ \\\\
+      \textsc{goto}($I_{0}, ($) = \textsc{closure}$(\{P→(·P),P→(·)\})$\\
+      = $\{P→(·P),P→(·),P→·(P),P→·()\}$ \\
+      
       如图所示：\\
       \fig{width = 0.80\textwidth}{LR0}
     \item 
@@ -93,7 +99,7 @@
       \hline
       \end{tabular}
       \end{table}
-
+\newpage
   \item 
 
     $FOLLOW(L)=\{(,\$\}$\\
