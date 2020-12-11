@@ -54,21 +54,34 @@
   \end{enumerate}
 \end{problem}
 
+\newpage
 \begin{solution}
-  
   \begin{enumerate}[(1)]
     \item
       \first{}$(L)=\{(\}$\\
       \first{}$(P)=\{(\}$\\
       \follow{}$(L)=\{(,\$\}$\\
       \follow{}$(P)=\{(,),\$\}$\\
-    \newpage
-    \item  
-      如图所示：\\
+ 
+    \item
+      计算方法：\\  
+      $\begin{aligned}
+        I_0 &= CLOSURE([L'→·L,\$]) \\
+        &= CLOSURE([L'→·L,\$],[L→·LP,\$],[L→·P,\$]) \\
+        &= CLOSURE([L'→·L,\$],[L→·LP,\$/(],[L→·P,\$/(]) \\
+        &= \{[L'→·L,\$],[L→·LP,\$/(],[L→·P,\$/(],[P→·(P),\$/(],[P→·(),\$/(]\} \\
+      \end{aligned}$
+      \\\\\\
+      $\begin{aligned}
+        GOTO(I_0,() &= CLOSURE([P→(·P),\$/(],[P→(·),\$/(]) \\
+        &= \{[P→(·P),\$/(],[P→(·),\$/(],[P→·(P),)],[P→·(),)]\} \\
+      \end{aligned}$
+      \\
       \fig{width = 0.80\textwidth}{lr1}
     \item 
       如图所示，是$LR(1)$文法\\
-      TODO:规约设置条件怎么写?\\
+      规约条件：在合并相同$LR(0)$核心项后\\
+      $[k:A→\alpha·,a]\in I_i \wedge A \neq S'\Rightarrow ACTION[i,a] = rk$\\
     \begin{table}[!htbp]
       \centering
       \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -104,6 +117,7 @@
       \hline
       \end{tabular}
       \end{table}
+    \newpage
   \item 
     合并$I_3$与$I_7$、$I_5$与$I_9$、$I_6$与$I_{10}$、$I_8$与$I_{11}$\\
     如图所示，是$LALR(1)$文法\\
@@ -130,7 +144,7 @@
       \cline{1-6}
       610&$r_4$&$r_4$&$r_4$& & \\
       \cline{1-6}
-      811&$r_{37}$&$r_{37}$&$r_{37}$& & \\
+      811&$r_{3}$&$r_{3}$&$r_{3}$& & \\
       \hline
       \end{tabular}
       \end{table}
