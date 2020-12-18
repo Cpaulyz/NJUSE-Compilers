@@ -1,0 +1,103 @@
+% hw6.tex
+
+% !TEX program = xelatex
+%%%%%%%%%%%%%%%%%%%%
+% see http://mirrors.concertpass.com/tex-archive/macros/latex/contrib/tufte-latex/sample-handout.pdf
+% for how to use tufte-handout
+\documentclass[a4paper, justified]{tufte-handout}
+
+\input{hw-preamble} % feel free to modify this file if you understand LaTeX well
+%%%%%%%%%%%%%%%%%%%%
+\title{编译原理作业 (6)}
+\me{陈彦泽}{181250015}{}{}
+\date{2020年12月17日}
+%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%
+\noplagiarism % PLEASE DON'T DELETE THIS LINE!
+%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+  % \mfigcap{width = 0.85\textwidth}{figs/George-Boole}{George Boole}
+  % \begin{center}{\fcolorbox{blue}{yellow!60}{\parbox{0.65\textwidth}{\large
+  %   \begin{itemize}
+  %     \item
+  %   \end{itemize}}}}
+  % \end{center}
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%
+\beginrequired
+%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+\begin{problem}[\score{10 = 5 + 5}]
+  以下文法 $G$ 描述了带可选小数部分的二进制数。
+  我们希望通过属性文法计算二进制数对应的十进制表示。
+  \begin{align*}
+    N &\to L . L \\
+    N &\to L \\
+    L &\to LB \\
+    L &\to B \\
+    B &\to 1 \\
+    B &\to 0
+  \end{align*}
+
+  \begin{enumerate}[(1)]
+    \item 请给出一种 $S$ 属性翻译方案。
+
+      {\it 提示: $123 = (1 \times 10 + 2) \times 10 + 3$}
+    \item 请给出一种 $L$ 属性翻译方案。
+  \end{enumerate}
+\end{problem}
+\newpage
+\begin{solution}
+  \begin{enumerate}[(1)]
+    \item  $S$ 属性翻译方案，综合属性为val、len：\\
+      \begin{align*}
+        N &\to L_1 . L_2 & \{N.val = L_1.val + L_2.val \div 2^{L_2.len};\}\\
+        N &\to L &\{N.val = L.val;\}\\
+        L &\to L_1B &\{L.val = L_1.val \times  2 + B.val;L.len = L_1.len+1;\}\\
+        L &\to B &\{L.val = B.val;L.len = 1;\}\\
+        B &\to 1 &\{B.val = 1;\}\\
+        B &\to 0 &\{B.val = 0;\}
+      \end{align*}
+    \item $L$ 属性翻译方案，综合属性为val、syn，继承属性为side、pos：\\
+      \begin{align*}
+        N \to &\{L_1.side = 1;L_1.pos=0;\}L_1 .\\
+              &\{L_2.side = 0;L_2.pos=-1;\} L_2 \\
+              &\{N.val = L_1.val + L_2.val\};\\
+        N \to &\{L_1.side = 1;L_1.pos=0;\}L \\
+              &\{N.val = L.val;\}\\
+        L \to &\{L_1.pos=L.pos+L.side;L_1.side=L.side;\}L_1\\
+              &\{L.syn=L_1.syn-1;B.pos=L.syn\}B \\
+              &\{L.val = L_1.val + B.val;\}\\
+        L \to &\{B.pos=L.pos\}B \\
+              &\{L.val = B.val;L.syn = B.syn;\}\\
+        B \to &1 \{B.val = 2^{B.pos};B.syn=B.pos;\}\\
+        B \to &0 \{B.val = 0;B.syn=B.pos;\}
+      \end{align*}
+      举个例子，10.11翻译过程如下
+      \fig{width = 0.80\textwidth}{example}
+  \end{enumerate}
+\end{solution}
+%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+% 如果没有需要订正的题目，可以把这部分删掉
+
+% \begincorrection
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+% 如果没有反馈，可以把这部分删掉
+% \beginfb
+
+% 你可以写
+% \begin{itemize}
+%   \item 对课程及教师的建议与意见
+%   \item 教材中不理解的内容
+%   \item 希望深入了解的内容
+%   \item $\cdots$
+% \end{itemize}
+%%%%%%%%%%%%%%%%%%%%
+\end{document}
