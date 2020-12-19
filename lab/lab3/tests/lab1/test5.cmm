@@ -1,0 +1,3 @@
+struct {
+    int c = a + 1 - -b().X/2;
+};

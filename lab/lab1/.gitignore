@@ -1,9 +1,0 @@
-/src/*
-!/src/*.c
-!/src/*.cpp
-!/src/*.h
-/src/lex.yy.c
-/src/syntax.tab.*
-!/src/lexical.l
-!/src/syntax.y
-.DS_Store
