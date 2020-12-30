@@ -1,0 +1,5 @@
+int main(){
+   struct A {
+      int a;
+   };
+}
