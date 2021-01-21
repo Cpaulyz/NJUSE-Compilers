@@ -14,7 +14,7 @@ Node* createNode(char identifier[], char value[], int type, int line){
     {
         node->child[i] = NULL; // 初始化为NULL
     }
-    
+    node->child_ptr = 0;
 	node->type = type;
 	node->line = line;
 

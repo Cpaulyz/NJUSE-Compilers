@@ -93,6 +93,7 @@ void Program(Node* root){
     flist->name="out";
     flist->type = wtype;
     write->param = flist;
+    flist->tail =NULL;
     insertFunc(read);
     insertFunc(write);
     
@@ -650,6 +651,7 @@ FieldList Args(Node *n){
     FieldList flist = (FieldList)malloc(sizeof(struct FieldList_));
 	flist->name = n->child[0]->value;
     flist->type = t;
+    flist->tail =NULL;
     if(n->child[2]!=NULL){ // Exp COMMA Args
         flist->tail = Args(n->child[2]);
     }

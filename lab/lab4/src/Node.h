@@ -14,7 +14,7 @@
 #define TYPE_FLOAT 6 
 #define TYPE_TERMINATION 7
 
-#define MAX_CHILD 5000
+#define MAX_CHILD 64
 typedef struct TreeNode{
 	//TODO: Complete Node Structure
 	char identifier[64];

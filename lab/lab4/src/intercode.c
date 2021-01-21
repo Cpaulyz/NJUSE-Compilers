@@ -411,7 +411,7 @@ CodeList translate_Exp(Node *Exp, Operand place){
     if(Exp==NULL){
         return NULL;
     }
-    fprintf(stderr,"Exp %d\n",Exp->line);
+    // fprintf(stderr,"Exp %d\n",Exp->line);
     if(strcmp(Exp->child[0]->identifier,"INT")==0){ //INT
         int val = (int)strtol(Exp->child[0]->value,NULL,10);
         InterCode ic = new_InterCode(IR_ASSIGN);

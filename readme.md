@@ -7,7 +7,7 @@ http://problemoverflow.cn/compilers/
 * LAB1 2100/2100
 * LAB2 2100/2100
 * LAB3 3000/3000
-* LAB4 1400/1500 TODO
+* LAB4 1500/1500
 
 ## 书面作业
 

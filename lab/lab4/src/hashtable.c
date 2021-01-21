@@ -38,8 +38,7 @@ extern Type getType(char *name){
     int hash = hashValue(name);
     HashNode *node = hashTable[hash];
     for(;node!=NULL;node = node->next){
-        if(strcmp(node->name,name)==0){ // 只需要比较名字就可以
-
+        if(strcmp(name,node->name)==0){ // 只需要比较名字就可以
             return node->type;
         }
     }
@@ -50,7 +49,7 @@ extern int localCheck(char *name){
     int hash = hashValue(name);
     HashNode *node = localTable[hash];
     for(;node!=NULL;node = node->next){
-        if(strcmp(node->name,name)==0){ // 只需要比较名字就可以
+        if(strcmp(name,node->name)==0){ // 只需要比较名字就可以
         // fprintf(stderr,"%s exist\n",node->name);
             return 1;
         }
@@ -61,8 +60,7 @@ extern int check(char *name){
     int hash = hashValue(name);
     HashNode *node = hashTable[hash];
     for(;node!=NULL;node = node->next){
-        if(strcmp(node->name,name)==0){ // 只需要比较名字就可以
-        // fprintf(stderr,"%s exist\n",node->name);
+        if(strcmp(name,node->name)==0){ // 只需要比较名字就可以
             return 1;
         }
     }
@@ -74,6 +72,7 @@ extern int localInsert(char *name,Type type){
     HashNode *newnode = (HashNode *)malloc(sizeof(HashNode));
     newnode->name = name;
     newnode->type = type;
+    newnode->next = NULL;
     HashNode *node = localTable[hash];
     if(node==NULL){
         localTable[hash] = newnode;
@@ -89,6 +88,7 @@ extern int insert(char *name,Type type){
     HashNode *newnode = (HashNode *)malloc(sizeof(HashNode));
     newnode->name = name;
     newnode->type = type;
+    newnode->next = NULL;
     HashNode *node = hashTable[hash];
     if(node==NULL){
         hashTable[hash] = newnode;
@@ -107,6 +107,7 @@ int insertFunc(Function func){
     newnode->type->kind = FUNCTION;
     newnode->type->assign = RIGHT;
     newnode->type->u.function = func;
+    newnode->next = NULL;
 
     int hash = hashValue(func->name); 
     HashNode *node = hashTable[hash];

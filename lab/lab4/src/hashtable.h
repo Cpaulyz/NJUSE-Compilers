@@ -5,7 +5,7 @@
 #include "semantic.h"
 #include <string.h>
 
-#define HASH_SIZE 1024
+#define HASH_SIZE 512
 
 typedef struct HashNode_{
     char *name;
