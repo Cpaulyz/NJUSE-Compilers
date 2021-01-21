@@ -66,13 +66,13 @@ CodeList translate_Dec(Node *Dec){
 
 1. 语法树的子节点个数超过最大值（使用数组实现，有最大限制）
 
-	![image-20201230211717228](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201230211717228.png)
+	![image-20201230211717228](https://cyzblog.oss-cn-beijing.aliyuncs.com/image-20201230211717228.png)
 
 	解决：将`MAX_CHILD`调大即可
 
 2. 自定义结构体的next指针问题
 
-	![image-20210121164738164](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210121164738164.png)
+	![image-20210121164738164](https://cyzblog.oss-cn-beijing.aliyuncs.com/image-20210121164738164.png)
 
 	这里发现`node=node->next`以后，node指向了一个非法地址而不是NULL，这是因为在node初始化的时候没有将`node->next`设置为NULL，添加后即可修复
 
@@ -88,6 +88,7 @@ CodeList translate_Dec(Node *Dec){
 
 	在这报了个错误
 
-	![image-20210121181629909](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210121181629909.png)
+	![image-20210121181629909](https://cyzblog.oss-cn-beijing.aliyuncs.com/image-20210121181629909.png)
 
 	原来是因为在初始化Node结构体时，没设置`child_ptr=0`，他变成了一个随机值。
+
