@@ -1,0 +1,14 @@
+int add(int temp[2]){
+    result =  (temp[0]+temp[1]);
+    write(result);
+    return result;
+}
+int main()
+{
+    int a[2];
+    a[0] = read();
+    a[1] = read();
+    res = add(a);
+    write(res);
+    return 0;
+}
